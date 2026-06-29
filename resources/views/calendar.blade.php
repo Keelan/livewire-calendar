@@ -6,7 +6,9 @@
     @endif
 >
     <div>
-        @includeIf($beforeCalendarView)
+        @if(filled($beforeCalendarView))
+            @include($beforeCalendarView)
+        @endif
     </div>
 
     <div class="flex">
@@ -37,6 +39,8 @@
     </div>
 
     <div>
-        @includeIf($afterCalendarView)
+        @if(filled($afterCalendarView))
+            @include($afterCalendarView)
+        @endif
     </div>
 </div>

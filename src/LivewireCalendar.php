@@ -127,8 +127,8 @@ class LivewireCalendar extends Component
         $this->eventView = $eventView ?? 'livewire-calendar::event';
         $this->dayOfWeekView = $dayOfWeekView ?? 'livewire-calendar::day-of-week';
 
-        $this->beforeCalendarView = $beforeCalendarView ?? null;
-        $this->afterCalendarView = $afterCalendarView ?? null;
+        $this->beforeCalendarView = $beforeCalendarView ?: '';
+        $this->afterCalendarView = $afterCalendarView ?: '';
     }
 
     public function setupPoll($pollMillis, $pollAction)
